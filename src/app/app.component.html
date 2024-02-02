@@ -1,12 +1,50 @@
-<app-navbar></app-navbar>
-<mat-grid-list cols="9" rowHeight="400px">
+<!-- <app-navbar></app-navbar> -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+      </button>
+      <h1>FERNNADO</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+ <mat-sidenav #sidenav mode="side">
+   <mat-nav-list>
+      <a mat-list-item>Dashboard</a>
+      <a mat-list-item>List</a>
+   </mat-nav-list>
+   <mat-sidenav-content>
+        <div style="height: 88vh;">
+         
+        </div>
+   </mat-sidenav-content>
+ </mat-sidenav>
+</mat-sidenav-container> 
+<h1>
+<router-outlet></router-outlet> 
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+ <mat-grid-list cols="9" rowHeight="400px">
 
   <mat-grid-tile colspan="1" rowspan="2" style="margin-top: 0;">
     <div style="background-color: lightgoldenrodyellow; height: 100%; width: 100%">
 
       <mat-toolbar color="primary" class="toolbar">
         <div class="button-container">
-          <button mat-button routerLink="/dashboard">Dashboard</button>
+          <button mat-button routerLinkActive="active" routerLink="/dashboard">Dashboard</button>
         </div>
         <div class="button-container">
           <button mat-button routerLink="/list">List</button>
@@ -33,5 +71,7 @@
     <app-table-list-movie></app-table-list-movie>
   </mat-grid-tile>
 
-</mat-grid-list>
-<router-outlet></router-outlet>
+</mat-grid-list>   -->
+
+
+

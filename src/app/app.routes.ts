@@ -1,16 +1,15 @@
 //app.routes.ts
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ListComponent } from './components/list/list.component';
+import { Routes } from '@angular/router';
+import { TableTopWinComponent } from './components/tables/table-top-win/table-top-win.component';
 
 export const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'list', component: ListComponent },
+  { path: '', component: TableTopWinComponent },
+  { path: 'dashboard', component: TableTopWinComponent },
+  { path: 'list', component: TableTopWinComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+
 })
 export class AppRoutingModule { }
