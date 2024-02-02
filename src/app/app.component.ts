@@ -6,6 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
@@ -21,7 +22,7 @@ import { TableTopWinComponent } from './components/tables/table-top-win/table-to
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [RouterOutlet, TableListYear, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, DashboardComponent, CommonModule, MatToolbarModule, TableProducersComponent, TableListMovieComponent, TableTopWinComponent, MatCardModule, MatGridListModule, NavbarComponent ],
+  imports: [RouterOutlet, MatMenuModule, TableListYear, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, DashboardComponent, CommonModule, MatToolbarModule, TableProducersComponent, TableListMovieComponent, TableTopWinComponent, MatCardModule, MatGridListModule, NavbarComponent ],
 })
 
 
