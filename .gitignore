@@ -52,9 +52,13 @@ testem.log
 /typings
 /reports
 /src/translations/template.*
+.angular*
+.angular
+.ngc/
 # /src/environments/.env.*
 
 # System Files
 .DS_Store
 Thumbs.db
-.angular/cache/17.1.2/golden/.tsbuildinfo
+
+.angular/cache/17.1.2/vite/deps/@angular_material_sort.js
