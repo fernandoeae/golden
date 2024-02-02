@@ -1,0 +1,12 @@
+/* navbar.component.css */
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    min-height: 80px; /* Ou defina uma altura mínima necessária para cobrir os botões */
+  }
+  
+  .mat-button {
+    margin-bottom: 8px; /* Adapte conforme necessário */
+  }
+  

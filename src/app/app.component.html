@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<mat-grid-list cols="9" rowHeight="400px">
+
+  <mat-grid-tile colspan="1" rowspan="2" style="margin-top: 0;">
+    <div style="background-color: lightgoldenrodyellow; height: 100%; width: 100%">
+
+      <mat-toolbar color="primary" class="toolbar">
+        <div class="button-container">
+          <button mat-button routerLink="/dashboard">Dashboard</button>
+        </div>
+        <div class="button-container">
+          <button mat-button routerLink="/list">List</button>
+        </div>
+      </mat-toolbar>
+      
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <table-list-year style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-list-year>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <table-top-win style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-top-win>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <table-producer style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-producer>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <app-table-list-movie></app-table-list-movie>
+  </mat-grid-tile>
+
+</mat-grid-list>
+<router-outlet></router-outlet>
