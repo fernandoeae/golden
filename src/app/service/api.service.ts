@@ -1,36 +1,12 @@
 // movie.service.ts
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Injectable, NgModule } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MovieService {
 
-  valorApi$: Observable<any>;
-
-  constructor(private http: HttpClient) {
-    this.valorApi$ = this.http.get('https://tools.texoit.com/backend-java/api/movies?page=9&size=99&winner=true&year=2018');
-  }
-}
-
-export class DashboardService {
-  getTable1Data(): Observable<any[]> {
-    // Implemente a lógica para obter os dados da tabela 1 aqui
-    return of(["fernando 1"]);  // Substitua pelo array de dados reais
-  }
-
-  getTable2Data(): Observable<any[]> {
-    // Implemente a lógica para obter os dados da tabela 2 aqui
-    return of(["fernando 2"]);  // Substitua pelo array de dados reais
-  }
-
-  getTable3Data(): Observable<any[]> {
-    // Implemente a lógica para obter os dados da tabela 3 aqui
-    return of(["fernando 3"]);  // Substitua pelo array de dados reais
-  }
-}
 
 @NgModule({
   imports: [
@@ -69,6 +45,14 @@ export class ApiService {
     //https://tools.texoit.com/backend-java/api/movies/?winner=true&year=2018
     return this.http.get<any>(`${this.apiUrl}?winner=true&year=2018`);
   }
+  
+  // // no data 
+  getAllMovies(): Observable<any> {
+    //https://tools.texoit.com/backend-java/api/movies/?page=9&size=99&winner=true&year=2018
+    return this.http.get<any>(`${this.apiUrl}?page=9&size=99&winner=true&year=2018`);
+  }
+
+  
   
 }
 

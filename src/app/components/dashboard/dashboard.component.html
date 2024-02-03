@@ -1,20 +1,24 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
-        </button>
-        <h1>angular sidenav</h1>
-    </mat-toolbar-row>
-</mat-toolbar>
-<mat-sidenav-container>
-   <mat-sidenav #sidenav opened="true" mode="side">
-     <mat-nav-list>
-        <a mat-list-item>Dashboard</a>
-        <a mat-list-item>List</a>
-     </mat-nav-list>
-     <mat-sidenav-content>
-          <div style="height: 88vh;">
-          </div>
-     </mat-sidenav-content>
-   </mat-sidenav>
-</mat-sidenav-container>
+ <mat-grid-list cols="9" rowHeight="400px">
+
+  <mat-grid-tile colspan="1" rowspan="2" style="margin-top: 0;">
+    <div style="background-color: lightgoldenrodyellow; height: 100%; width: 100%">
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <table-list-year style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-list-year>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <table-top-win style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-top-win>
+  </mat-grid-tile>
+  
+  <mat-grid-tile colspan="4" rowspan="1">
+    <table-producer style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-producer>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="4" rowspan="1">
+    <app-table-list-movie></app-table-list-movie>
+  </mat-grid-tile>
+
+</mat-grid-list>  
