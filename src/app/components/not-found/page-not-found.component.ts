@@ -8,6 +8,4 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './page-not-found.component.html',
   styleUrl: './page-not-found.component.css'
 })
-export class NotFoundPageComponent {
-
-}
+export class NotFoundPageComponent {}

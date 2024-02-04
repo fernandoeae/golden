@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ListMovieComponent } from './components/list/list-movie.component';
+import { ListMovieComponent } from './components/list/list-movies.component';
 import { NotFoundPageComponent } from './components/not-found/page-not-found.component';
 
 export const routes: Routes = [

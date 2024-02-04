@@ -1,40 +1,45 @@
-   <mat-card style="width: 100%">
-    <mat-card-header >
-      <mat-card-title>List years with miltiple winners</mat-card-title>
+<div class="mp">
+  <mat-card class="w100">
+    <mat-card-header>
+      <div *ngIf="!dataFake; else noDataMessage">
+        <mat-card-title style="color:red">List years with multiple winners Caso essa mensagem esteja aparecendo é porque a API estava vazia. Foi necessário popular com dados fake</mat-card-title>
+      </div>
+      <ng-template #noDataMessage>
+        <mat-card-title style="color:blue"> List years with multiple winners API ok</mat-card-title>
+      </ng-template>
     </mat-card-header>
-  
     <mat-card-content>
-      <div style="display: flex; flex-direction: column; ">
-        <div>
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  
-            <ng-container matColumnDef="id">
-              <th mat-header-cell *matHeaderCellDef> ID. </th>
-              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-            </ng-container>
-        
-            <ng-container matColumnDef="year">
-              <th mat-header-cell *matHeaderCellDef> Year </th>
-              <td mat-cell *matCellDef="let element"> {{element.year}} </td>
-            </ng-container>
-        
-            <ng-container matColumnDef="title">
-              <th mat-header-cell *matHeaderCellDef> Title </th>
-              <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="winner">
-              <th mat-header-cell *matHeaderCellDef> Winner </th>
-              <td mat-cell *matCellDef="let element"> {{element.winner}} </td>
-            </ng-container>
-        
-            <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef> Winner </th>
-              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-            </ng-container>
-
-          </table>
-        </div>
+      <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>
+              ID
+            </th>
+            <td mat-cell *matCellDef="let item"> {{item.id}} </td>
+          </ng-container>
+          <ng-container matColumnDef="year">
+            <th mat-header-cell *matHeaderCellDef>
+              Year <input matInput placeholder="Filter by Year" (input)="applyFilter($event, 'year')">
+            </th>
+            <td mat-cell *matCellDef="let item"> {{item.year}} </td>
+          </ng-container>
+          <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef>
+              Title
+            </th>
+            <td mat-cell *matCellDef="let item"> {{item.title}} </td>
+          </ng-container>
+          <ng-container matColumnDef="winner">
+            <th mat-header-cell *matHeaderCellDef>
+              Winner <input matInput placeholder="Yes/No" (input)="applyFilter($event, 'winner')">
+            </th>
+            <td mat-cell *matCellDef="let item"> {{item.winner}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
       </div>
     </mat-card-content>
-  </mat-card>  
+  </mat-card>
+</div>

@@ -1,23 +1,6 @@
-.toolbar {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .button-container {
-    margin-bottom: 8px; /* Adicione a margem desejada entre os botões */
-  }
-
-  /* app.component.css */
-
-  .background {
-    background-color: rgb(215, 208, 208) !important;
+table {
+  width: 100%;
 }
-  
-  .button-container {
-    margin-bottom: 8px;
-  }
-  
-  .mat-grid-tile {
-    margin-top: 0;
-  }
-  
+.mp{
+  padding: 150px ; padding-top: 0px;
+}
