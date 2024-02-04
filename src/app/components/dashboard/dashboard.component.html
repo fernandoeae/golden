@@ -1,24 +1,25 @@
- <mat-grid-list cols="9" rowHeight="400px">
-
-  <mat-grid-tile colspan="1" rowspan="2" style="margin-top: 0;">
-    <div style="background-color: lightgoldenrodyellow; height: 100%; width: 100%">
+<div fxLayout="row wrap" fxLayout.xs="column">
+  <div fxFlex="calc(50% - 16px)" style="margin-bottom: 16px;">
+    <div>
+      <table-list-year></table-list-year>
     </div>
-  </mat-grid-tile>
+  </div>
 
-  <mat-grid-tile colspan="4" rowspan="1">
-    <table-list-year style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-list-year>
-  </mat-grid-tile>
+  <div fxFlex="calc(50% - 16px)" style="margin-bottom: 16px;">
+    <div>
+      <table-top-win></table-top-win>
+    </div>
+  </div>
 
-  <mat-grid-tile colspan="4" rowspan="1">
-    <table-top-win style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-top-win>
-  </mat-grid-tile>
-  
-  <mat-grid-tile colspan="4" rowspan="1">
-    <table-producer style="display: flex; flex-direction: column; align-items: center; width: 100%;"></table-producer>
-  </mat-grid-tile>
+  <div fxFlex="calc(50% - 16px)" style="margin-bottom: 16px;">
+    <div>
+      <table-producer></table-producer>
+    </div>
+  </div>
 
-  <mat-grid-tile colspan="4" rowspan="1">
-    <app-table-list-movie></app-table-list-movie>
-  </mat-grid-tile>
-
-</mat-grid-list>  
+  <div fxFlex="calc(50% - 16px)" style="margin-bottom: 16px;">
+    <div>
+      <app-table-list-movie></app-table-list-movie>
+    </div>
+  </div>
+</div>

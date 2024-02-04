@@ -57,7 +57,6 @@ export class TableProducersComponent {
       this.maxProducer = data.max; // Atribui os dados à propriedade 'max'
       this.dataSourceMax.data = this.maxProducer; 
 
-      console.log("teste min"+JSON.stringify(this.dataSourceMin.data))
       console.log("teste max"+JSON.stringify(this.dataSourceMax.data))
     });
   }

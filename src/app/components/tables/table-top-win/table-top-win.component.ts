@@ -29,7 +29,6 @@ export class TableTopWinComponent {
       const top3Studios = this.studios.slice(0, 3);
       // Atualiza o dataSource com os top 3 estúdios
       this.dataSource.data = top3Studios;
-      console.log('FERNANDO:'+data.studios.name)
     });
   }
 }

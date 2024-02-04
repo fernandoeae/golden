@@ -1,6 +1,8 @@
 // app.component.ts
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutServerModule } from '@angular/flex-layout/server';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -23,9 +25,7 @@ import { TableTopWinComponent } from './components/tables/table-top-win/table-to
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [RouterOutlet, MatMenuModule, AppRoutingModule, TableListYear, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, DashboardComponent, CommonModule, MatToolbarModule, TableProducersComponent, TableListMovieComponent, TableTopWinComponent, MatCardModule, MatGridListModule, NavbarComponent ],
+  imports: [RouterOutlet, FlexLayoutServerModule, FlexLayoutModule, AppRoutingModule, MatMenuModule, TableListYear, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, DashboardComponent, CommonModule, MatToolbarModule, TableProducersComponent, TableListMovieComponent, TableTopWinComponent, MatCardModule, MatGridListModule, NavbarComponent ],
 })
 
-export class AppComponent implements OnInit {
-  ngOnInit() {}
-}
+export class AppComponent  {}

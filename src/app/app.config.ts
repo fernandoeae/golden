@@ -1,18 +1,18 @@
 //app.config.ts
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ApplicationConfig } from '@angular/core';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { PreloadAllModules, provideRouter, withPreloading } from '@angular/router';
 import { routes } from './app.routes';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ApiService } from './service/api.service';
  
 export const appConfig: ApplicationConfig = {
-  providers: [provideClientHydration(), provideHttpClient(withFetch()), provideAnimationsAsync(),
-    //necessary for load the routes 
-    provideRouter(
+  providers: [provideClientHydration(), ApiService, importProvidersFrom(HttpClientModule), provideHttpClient(withFetch()), provideAnimationsAsync(),
+     provideRouter(
       routes,
-      withPreloading(PreloadAllModules)
-    ),
-  ]
+       withPreloading(PreloadAllModules)
+     ),
+  ],
 };

@@ -1,11 +1,7 @@
 // movie.service.ts
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, HttpHandler, HttpRequest } from '@angular/common/http';
-import { Injectable, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root',
-})
 
 
 @NgModule({
@@ -28,6 +24,7 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getMultipleWinner(): Observable<any> {
+    //https://tools.texoit.com/backend-java/api/movies/?projection=years-with-multiple-winners
     return this.http.get<any>(`${this.apiUrl}?projection=years-with-multiple-winners`);
   }
 
@@ -41,18 +38,10 @@ export class ApiService {
     return this.http.get<any>(`${this.apiUrl}?projection=max-min-win-interval-for-producers`);
   }
 
-  getMovieWinnerBY(): Observable<any> {
+  getMovieWinnerBY(ano: number): Observable<any> {
     //https://tools.texoit.com/backend-java/api/movies/?winner=true&year=2018
-    return this.http.get<any>(`${this.apiUrl}?winner=true&year=2018`);
+    return this.http.get<any>(`${this.apiUrl}?winner=true&year=`+ano);
   }
-  
-  // // no data 
-  getAllMovies(): Observable<any> {
-    //https://tools.texoit.com/backend-java/api/movies/?page=9&size=99&winner=true&year=2018
-    return this.http.get<any>(`${this.apiUrl}?page=9&size=99&winner=true&year=2018`);
-  }
-
-  
   
 }
 
