@@ -4,3 +4,8 @@
 .mf {
   margin-left: 20px;
 }
+
+.sidenav-container {
+  max-height: calc(100vh - 56px); /* Ajuste conforme necessário para levar em consideração a altura do seu rodapé */
+  overflow: auto;
+}

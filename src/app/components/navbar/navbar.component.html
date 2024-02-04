@@ -1,20 +1,22 @@
-
 <mat-sidenav-container class="sidenav-container primary" color="primary">
+  <!-- Conteúdo principal vai aqui -->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="mf">FERNANDO</span>
+    </mat-toolbar>
+   
+    <router-outlet></router-outlet>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+
+  <!-- Sidenav agora é parte do conteúdo principal -->
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" opened style="margin-top: 64px;">
     <mat-nav-list class="nav-item">
       <a mat-list-item routerLink="/dashboard" (click)="goToDashboard()" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a>
       <a mat-list-item routerLink="/list" (click)="goToList()" routerLinkActive="active" ariaCurrentWhenActive="page">List</a>
-      </mat-nav-list>
+    </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-      <mat-toolbar color="primary">
-          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-            <mat-icon aria-label="Side nav toggle icon" >menu</mat-icon>
-          </button>
-          <span class="mf">FERNANDO</span>
-      </mat-toolbar>
-     
-      <router-outlet></router-outlet>
-      <ng-content></ng-content>
-  </mat-sidenav-content>
-</mat-sidenav-container> 
+</mat-sidenav-container>
