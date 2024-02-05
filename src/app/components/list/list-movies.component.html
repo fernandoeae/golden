@@ -1,7 +1,7 @@
 <div class="mp">
   <mat-card class="w100">
     <mat-card-header>
-      <div *ngIf="!dataFake; else noDataMessage">
+      <div *ngIf="dataFake; else noDataMessage">
         <mat-card-title style="color:red">List years with multiple winners Caso essa mensagem esteja aparecendo é porque a API estava vazia. Foi necessário popular com dados fake</mat-card-title>
       </div>
       <ng-template #noDataMessage>
