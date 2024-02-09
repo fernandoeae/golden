@@ -1,0 +1,25 @@
+.whatsapp-button {
+    position: fixed;
+    bottom: 110px;
+    right: 40px;
+    z-index: 1000; /* Ajuste conforme necessário */
+    background-color: transparent;
+    border: none; /* Remove a borda do botão */
+    padding: 0; /* Remove o preenchimento interno do botão */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão em 10% quando o mouse passar por cima */
+  }
+
+  /* Estilos para telas de celular */
+@media screen and (max-width: 768px) {
+    .whatsapp-button {
+      width: 50px; /* Define a largura do botão */
+      height: 50px; /* Define a altura do botão */
+      position: fixed; /* Mantém o botão fixo na tela */
+      bottom: 130px; /* Distância do botão ao fundo da tela */
+      right: 20px; /* Distância do botão à direita da tela */
+      z-index: 1000; /* Define a ordem de empilhamento do botão */
+    }
+  }

@@ -1,16 +1,6 @@
-/* navbar.component.css */
-
-/* .toolbar {
-    display: flex;
-    flex-direction: column;
-    min-height: 80px; 
-  }
-  
-  .mat-button {
-    margin-bottom: 8px; 
-  }
-
-  .selected {
-    font-weight: bold;
-} */
-  
+.whatsapp-button {
+  position: fixed;
+  bottom: 110px;
+  right: 40px;
+  z-index: 1000; /* Ajuste conforme necessário */
+}

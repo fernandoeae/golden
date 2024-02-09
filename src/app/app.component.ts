@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { AppRoutingModule } from './app.routes';
 import { FooterComponent } from './components/app-footer/footer.component';
+import { ButtonWhatsappComponent } from './components/button-whatsapp/button-whatsapp.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TableListMovieComponent } from './components/tables/table-list-movie/table-list-movie.component';
@@ -26,7 +27,11 @@ import { TableTopWinComponent } from './components/tables/table-top-win/table-to
   standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [RouterOutlet, FooterComponent, FlexLayoutServerModule, FlexLayoutModule, AppRoutingModule, MatMenuModule, TableListYear, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, DashboardComponent, CommonModule, MatToolbarModule, TableProducersComponent, TableListMovieComponent, TableTopWinComponent, MatCardModule, MatGridListModule, NavbarComponent ],
+  imports: [RouterOutlet, ButtonWhatsappComponent, FooterComponent, FlexLayoutServerModule, FlexLayoutModule, AppRoutingModule, MatMenuModule, TableListYear, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, DashboardComponent, CommonModule, MatToolbarModule, TableProducersComponent, TableListMovieComponent, TableTopWinComponent, MatCardModule, MatGridListModule, NavbarComponent ],
 })
 
-export class AppComponent  {}
+export class AppComponent  {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+}

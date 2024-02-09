@@ -1,11 +1,24 @@
-.spacer {
-    flex: 1 1 auto;
-}
-.mf {
-  margin-left: 20px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
-.sidenav-container {
-  max-height: calc(100vh - 56px); /* Ajuste conforme necessário para levar em consideração a altura do seu rodapé */
-  overflow: auto;
+.navbar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #555;
 }
