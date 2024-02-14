@@ -59,5 +59,9 @@ bash
 git push origin minha-nova-feature
 Envie um pull request para o repositório original.
 
+npm install @angular/material
+npm install @angular/flex-layout
+ng add @angular/material
+
 Licença
 Este projeto está licenciado sob a Licença MIT.
